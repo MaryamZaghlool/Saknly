@@ -1,0 +1,152 @@
+.formCard {
+  background: var(--card-bg);
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 24px 0 rgba(14, 165, 233, 0.08),
+    0 1.5px 6px 0 rgba(0, 0, 0, 0.04);
+  padding: 2.5rem 1.5rem;
+  max-width: 480px;
+  margin: 2.5rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.label {
+  display: block;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--primary-700);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
+}
+.inputWrapper {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+.input {
+  width: 100%;
+  padding: 0.85rem 2.5rem 0.85rem 1.1rem;
+  border-radius: 0.75rem;
+  border: 1.5px solid var(--border-light);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px 0 rgba(14, 165, 233, 0.03);
+  direction: rtl;
+  display: block;
+}
+.input:focus {
+  border: 1.5px solid var(--primary-400);
+  box-shadow: 0 0 0 2px var(--primary-100);
+  outline: none;
+}
+.inputError {
+  border: 1.5px solid var(--error-500) !important;
+  background: var(--error-50);
+  box-shadow: 0 0 0 2px var(--error-100);
+}
+.inputIcon {
+  position: absolute;
+  right: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary-400);
+  font-size: 1.3rem;
+  pointer-events: none;
+  display: block;
+}
+.errorMsg {
+  display: block;
+  margin: 0.3rem 0 0.7rem 0;
+  color: var(--error-700);
+  background: var(--error-50);
+  border: 1px solid var(--error-200);
+  border-radius: 0.4rem;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
+  text-align: right;
+  box-shadow: 0 2px 8px 0 rgba(239, 68, 68, 0.07);
+}
+.button {
+  background: var(--primary-600);
+  color: var(--text-white);
+  border: 2px solid var(--primary-400);
+  border-radius: 0.75rem;
+  padding: 0.85rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  box-shadow: 0 2px 8px 0 rgba(14, 165, 233, 0.08);
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s, border 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.button:hover,
+.button:focus {
+  background: var(--primary-700);
+  border: 2px solid var(--primary-600);
+  box-shadow: 0 4px 16px 0 rgba(14, 165, 233, 0.13);
+  transform: translateY(-2px) scale(1.03);
+}
+.spinner {
+  border: 2.5px solid var(--primary-100);
+  border-top: 2.5px solid var(--primary-600);
+  border-radius: 50%;
+  width: 1.2em;
+  height: 1.2em;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.status {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  animation: fadeIn 0.5s;
+}
+.statusSuccess {
+  color: var(--success-700);
+  background: var(--success-50);
+}
+.statusError {
+  color: var(--error-700);
+  background: var(--error-50);
+}
+.statusInfo {
+  color: var(--primary-700);
+  background: var(--primary-50);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 600px) {
+  .formCard {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+}
+ 
