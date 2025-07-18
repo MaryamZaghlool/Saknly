@@ -34,11 +34,6 @@ import { useRouter } from "next/navigation";
 
 const NAV_LINKS = [
   { label: "الرئيسية", href: "/", icon: <HomeIcon sx={{ ml: 0.5 }} /> },
-  { label: "العقارات", href: "/properties" },
-  { label: "من نحن", href: "/about" },
-  { label: "اتصل بنا", href: "/contact" },
-  { label: "سياسة الخصوصية", href: "/privacy-policy" },
-  { label: "قائمة الأمنيات", href: "/wishlist", icon: <FavoriteBorderIcon sx={{ ml: 1, mr: 1 }} /> },
 ];
 
 
@@ -305,21 +300,6 @@ export default function Navbar() {
                   }
                 }}
               >
-                <MenuItem 
-                  component={Link} 
-                  href="/userProfile" 
-                  onClick={handleClose} 
-                  sx={{ 
-                    fontFamily: 'Cairo, sans-serif',
-                    py: 1.2,
-                    px: 2,
-                    transition: 'all 0.2s ease',
-                    '&:hover': { bgcolor: 'rgba(59,130,246,0.06)' }
-                  }}
-                >
-                  <AccountCircleIcon sx={{ ml: 1, color: 'primary.light' }} /> 
-                  الملف الشخصي
-                </MenuItem>
                 <MenuItem 
                   onClick={() => { handleClose(); logout(); }} 
                   sx={{ 

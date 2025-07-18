@@ -16,6 +16,7 @@ import HydrationCleanup from "../shared/components/HydrationCleanup";
 import { ToastProvider } from "@/shared/provider/ToastProvider";
 import AuthGuard from "@/shared/components/AuthGuard";
 import ChatbotButton from "@/components/ChatbotButton";
+import Navbar from "@/shared/components/Navbar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -146,6 +147,7 @@ export default function RootLayout({
           <AuthProvider>
             <AuthGuard>
             <WishlistProvider>
+              <Navbar/>
               <div id="root" className="relative">
                 {children}
                 <ChatbotButton />
