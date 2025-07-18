@@ -40,7 +40,7 @@ const sanchez = Sanchez({
 const reportWebVitals = (metric: any) => {
   if (process.env.NODE_ENV === 'production') {
     // Send to analytics service
-    console.log('Web Vitals:', metric);
+    // console.log('Web Vitals:', metric);
   }
 };
 
@@ -49,10 +49,10 @@ if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js')
       .then((registration) => {
-        console.log('SW registered: ', registration);
+        // console.log('SW registered: ', registration);
       })
       .catch((registrationError) => {
-        console.log('SW registration failed: ', registrationError);
+        // console.log('SW registration failed: ', registrationError);
       });
   });
 }

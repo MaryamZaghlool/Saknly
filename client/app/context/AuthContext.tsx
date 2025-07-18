@@ -65,7 +65,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
           logout();
         }
       } catch (error) {
-        console.error("Failed to fetch user:", error);
+        // console.error("Failed to fetch user:", error);
         logout();
       }
     }
@@ -88,7 +88,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
           }
         );
       }
-      console.log("Logout successful");
+      // console.log("Logout successful");
       router.push('/');
 
     } catch (error) {

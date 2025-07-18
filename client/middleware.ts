@@ -8,7 +8,7 @@ interface DecodedToken {
 export function middleware(request: NextRequest) {
     const token = request.cookies.get('token')?.value;
     const pathname = request.nextUrl.pathname;
-    console.log('Token from cookie:', token);
+    // console.log('Token from cookie:', token);
 
 
     // صفحات عامة مفيش حماية عليها
@@ -28,7 +28,7 @@ export function middleware(request: NextRequest) {
                 return NextResponse.redirect(new URL('/', request.url));
             }
         } catch (err) {
-            console.error('Invalid token for admin page');
+            // console.error('Invalid token for admin page');
             return NextResponse.redirect(new URL('/login', request.url));
         }
     }
