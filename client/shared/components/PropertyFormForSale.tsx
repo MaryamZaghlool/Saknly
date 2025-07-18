@@ -393,7 +393,7 @@ export default function PropertyFormForSale() {
     try {
       const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/properties/addProperty`, {
         method: 'POST',
-        // headers: { Authorization: `Saknly__${token}` },
+        headers: { Authorization: `Saknly__${token}` },
         body: formDataToSend
       });
 
