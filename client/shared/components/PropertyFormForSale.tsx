@@ -303,18 +303,18 @@ export default function PropertyFormForSale() {
     }
 
     // Validate token
-    // try {
-    //   const decoded: any = jwtDecode(token);
-    //   if (!decoded.role || !decoded.exp || decoded.exp < Date.now() / 1000) {
-    //     throw new Error('توكن غير صالح');
-    //   }
-    // } catch (err) {
-    //   localStorage.removeItem('token');
-    //   showSnackbar('جلسة العمل منتهية، يرجى تسجيل الدخول مرة أخرى', 'error');
-    //   router.push('/login');
-    //   setIsSubmitting(false);
-    //   return;
-    // }
+    try {
+      const decoded: any = jwtDecode(token);
+      if (!decoded.role || !decoded.exp || decoded.exp < Date.now() / 1000) {
+        throw new Error('توكن غير صالح');
+      }
+    } catch (err) {
+      localStorage.removeItem('token');
+      showSnackbar('جلسة العمل منتهية، يرجى تسجيل الدخول مرة أخرى', 'error');
+      router.push('/login');
+      setIsSubmitting(false);
+      return;
+    }
 
     // Prepare form data
     const formDataToSend = new FormData();
