@@ -481,33 +481,6 @@ export default function Register() {
             </a>
           </Typography>
 
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              textAlign: "center",
-              margin: "1.5rem 0",
-            }}>
-            <Box sx={{ flex: 1, height: "1px", backgroundColor: "#ccc" }} />
-            <Typography
-              sx={{
-                padding: "0 1rem",
-                whiteSpace: "nowrap",
-                color: "#555",
-              }}>
-              أو
-            </Typography>
-            <Box sx={{ flex: 1, height: "1px", backgroundColor: "#ccc" }} />
-          </Box>
-
-          <Box
-            sx={{
-              display: "flex",
-              gap: "1rem",
-              justifyContent: "center",
-            }}>
-            <GoogleButton></GoogleButton>
-          </Box>
         </Box>
 
       </Box>
